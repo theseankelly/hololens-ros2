@@ -28,5 +28,6 @@
   </ItemGroup>
   <ItemGroup>
     <Midl Include="Node.idl" />
+    <Midl Include="CameraStreamer.idl" />
   </ItemGroup>
 </Project>

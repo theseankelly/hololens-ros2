@@ -1,0 +1,10 @@
+namespace HoloLensRos2
+{
+	[default_interface]
+	runtimeclass CameraStreamer
+	{
+		CameraStreamer();
+
+		Windows.Foundation.IAsyncAction StartPublishing();
+	}
+}
