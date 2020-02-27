@@ -29,11 +29,11 @@ namespace HoloLensRos2Example
             this.InitializeComponent();
         }
 
-        private void Button_Click(object sender, RoutedEventArgs e)
+        private async void Button_Click(object sender, RoutedEventArgs e)
         {
-            var n = new HoloLensRos2.Node("HoloLens");
-            //var n = new HoloLensRos2.CameraStreamer();
-            System.Threading.Tasks.Task.Run(() => n.StartPublishing());
+            //var n = new HoloLensRos2.Node("HoloLens");
+            var n = new HoloLensRos2.CameraStreamer();
+            await System.Threading.Tasks.Task.Run(() => n.StartPublishing());
         }
     }
 }
