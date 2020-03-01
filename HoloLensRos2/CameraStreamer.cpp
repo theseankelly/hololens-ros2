@@ -21,8 +21,8 @@ namespace winrt::HoloLensRos2::implementation
 	public:
 		CameraNode(std::string const& name) 
 			: rclcpp::Node(name), count_(0), streamer_(std::make_shared<HoloCameraStreamer>())
-		{ 
-			publisher_ = this->create_publisher<sensor_msgs::msg::Image>("vlcll", rmw_qos_profile_sensor_data);
+		{
+			publisher_ = this->create_publisher<sensor_msgs::msg::Image>("vlcll", rclcpp::SensorDataQoS());
 			auto frame_callback =
 				[this](const MediaFrameReader& sender, const MediaFrameArrivedEventArgs& args) -> void
 			{
